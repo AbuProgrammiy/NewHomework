@@ -1,0 +1,26 @@
+<p-chip routerLink="" label="Thriller" [removable]="true"></p-chip>
+
+<div class="main">
+    <p-table [value]="cars" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-car>
+    
+            <tr>
+                <td>{{car.id}}</td>
+                <td>{{car.carName}}</td>
+                <td>{{car.brandName}}</td>
+                <td>{{car.price}}</td>
+                <td>{{car.rating}}</td>
+            </tr>
+    
+        </ng-template>
+    </p-table>
+</div>

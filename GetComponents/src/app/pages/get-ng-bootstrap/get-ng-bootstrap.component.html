@@ -1,0 +1,48 @@
+
+<a
+    routerLink=""
+	type="button"
+	class="btn btn-danger"
+	ngbPopover="Hayr Salaomat boling"
+	triggers="mouseenter:mouseleave"
+	popoverTitle="Oxirgi bekat"
+>
+	Exit
+</a>
+
+
+<p class="main">
+    <button type="button" class="btn btn-outline-primary ms-2" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        Pres to See
+    </button>
+</p>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+        <div class="card-body">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (car of cars; track car.id;) {
+                    <tr>
+                        <td>{{car.id}}</td>
+                        <td>{{car.carName}}</td>
+                        <td>{{car.brandName}}</td>
+                        <td>{{car.price}}</td>
+                        <td>{{car.rating}}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
