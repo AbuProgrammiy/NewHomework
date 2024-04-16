@@ -1,1 +1,1 @@
-# zooooooooooooooorga push qildim oziyam
+# ^^^ ajdarhoni zoooo'rga push qildim oziyam
